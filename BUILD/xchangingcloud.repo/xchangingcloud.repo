@@ -1,0 +1,5 @@
+[xchangingcloud]
+name=Xchanging Cloud Extra Packages
+baseurl=http://GB3MGMTSRV25.xchangingcloud.local/repo/xchangingcloud
+enabled=1
+gpgcheck=0

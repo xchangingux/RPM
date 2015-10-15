@@ -1,0 +1,26 @@
+Name:      xchangingcloud.repo       
+Version:   1.0       
+Release:   1%{?dist}
+Summary:   Configuration for yum.xchangingcloud.local       
+Source0:   %{name}-%{version}.tar.gz
+Group:     System Environment/Base         
+License:   GPL
+URL:       None            
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-buildroot
+%description
+This package contains the yum.xchangingcloud.local repository.
+
+%prep
+%setup -q
+
+%install
+mkdir -p "$RPM_BUILD_ROOT"
+cp -R * "$RPM_BUILD_ROOT"
+
+%clean
+rm -rf $PRM_BUILD_ROOT
+
+%files
+%defattr(-,root,root,-)
+/etc/yum.repos.d/xchangingcloud.repo
